@@ -7,14 +7,34 @@
     android:padding="24dp"
     android:background="#FAFAFA">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CHECK LIST"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        android:letterSpacing="0.1"
-        android:textColor="#212121" />
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="CHECK LIST"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"
+            android:textColor="#212121" />
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="+"
+            android:textSize="24sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#4CAF50"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:padding="0dp" />
+    </LinearLayout>
 
     <Button
         android:layout_width="wrap_content"
@@ -27,14 +47,6 @@
         android:textColor="#757575"
         android:backgroundTint="#F5F5F5" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="0/5"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:textColor="#424242" />
 
     <View
         android:layout_width="match_parent"
@@ -42,149 +54,10 @@
         android:layout_marginTop="20dp"
         android:background="#E0E0E0" />
 
-    <!-- Task 1 (checked) -->
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:paddingVertical="14dp">
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:buttonTint="#4CAF50"
-            android:clickable="false"
-            android:focusable="false" />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="12dp"
-            android:layout_weight="1"
-            android:layout_marginStart="8dp"
-            android:background="#BDBDBD" />
-
-    </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#EEEEEE" />
-
-    <!-- Task 2 -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:paddingVertical="14dp">
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="false"
-            android:buttonTint="#9E9E9E"
-            android:clickable="false"
-            android:focusable="false" />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="12dp"
-            android:layout_weight="1"
-            android:layout_marginStart="8dp"
-            android:background="#BDBDBD" />
-
-    </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#EEEEEE" />
-
-    <!-- Task 3 -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:paddingVertical="14dp">
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="false"
-            android:buttonTint="#9E9E9E"
-            android:clickable="false"
-            android:focusable="false" />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="12dp"
-            android:layout_weight="1"
-            android:layout_marginStart="8dp"
-            android:background="#BDBDBD" />
-
-    </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#EEEEEE" />
-
-    <!-- Task 4 -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:paddingVertical="14dp">
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="false"
-            android:buttonTint="#9E9E9E"
-            android:clickable="false"
-            android:focusable="false" />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="12dp"
-            android:layout_weight="1"
-            android:layout_marginStart="8dp"
-            android:background="#BDBDBD" />
-
-    </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#EEEEEE" />
-
-    <!-- Task 5 -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:paddingVertical="14dp">
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="false"
-            android:buttonTint="#9E9E9E"
-            android:clickable="false"
-            android:focusable="false" />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="12dp"
-            android:layout_weight="1"
-            android:layout_marginStart="8dp"
-            android:background="#BDBDBD" />
-
-    </LinearLayout>
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp" />
 
 </LinearLayout>
